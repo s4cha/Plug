@@ -1,0 +1,10 @@
+framework module Arrow {
+  umbrella header "Arrow.h"
+
+  export *
+  module * { export * }
+}
+
+module Arrow.Swift {
+    header "Arrow-Swift.h"
+}

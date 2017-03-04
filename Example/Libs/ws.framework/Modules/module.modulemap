@@ -1,0 +1,10 @@
+framework module ws {
+  umbrella header "ws.h"
+
+  export *
+  module * { export * }
+}
+
+module ws.Swift {
+    header "ws-Swift.h"
+}

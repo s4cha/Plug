@@ -1,0 +1,10 @@
+framework module then {
+  umbrella header "then.h"
+
+  export *
+  module * { export * }
+}
+
+module then.Swift {
+    header "then-Swift.h"
+}

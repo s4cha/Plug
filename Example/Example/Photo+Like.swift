@@ -1,0 +1,33 @@
+//
+//  Photo+Like.swift
+//  Example
+//
+//  Created by Sacha Durand Saint Omer on 04/03/2017.
+//  Copyright © 2017 freshOS. All rights reserved.
+//
+
+import Actions
+import then
+
+// This is an optional sugar 
+// We develop software for humans
+// calling photo.like is more intuitive that calling `action(_likePhoto, photo)`
+
+extension Photo {
+    func like() -> Promise<Void> {
+        return action(_likePhoto, self)
+    }
+}
+
+
+// Another cool thing is that here you could implement Optimistic likes
+//extension Photo {
+//    func like() -> Promise<Void> {
+//        isLiked = true
+//        let p = action(_likePhoto, self)
+//        p.onError { e in
+//            self.isLiked = false
+//        }
+//        return p
+//    }
+//}
