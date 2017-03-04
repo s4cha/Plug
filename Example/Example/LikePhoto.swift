@@ -9,8 +9,16 @@
 import Actions
 import then
 
-var _likePhoto: AnyAction<Photo, Promise<Void>>!
+//typealias LikePhoto = AnyAction<Photo, Promise<Void>>
 
-protocol LikePhoto: Action {
-    func perform(_ input: Photo) -> Promise<Void>
+class LikePhoto: AnAction<Photo, Promise<Void>> {}
+class PostPhoto: AnAction<Photo, Promise<Void>> {}
+
+
+
+
+
+protocol LikePhotoType {
+    var action: AnAction<Photo, Promise<Void>>
 }
+

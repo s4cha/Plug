@@ -20,6 +20,7 @@
 		999A99C11E6AB1D20007C653 /* ws.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99C01E6AB1D20007C653 /* ws.framework */; };
 		999A99C31E6AB1D70007C653 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99C21E6AB1D70007C653 /* Alamofire.framework */; };
 		999A99C51E6AB1F20007C653 /* Arrow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99C41E6AB1F20007C653 /* Arrow.framework */; };
+		999A99CA1E6AD09E0007C653 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99C91E6AD09E0007C653 /* Swinject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		999A99C01E6AB1D20007C653 /* ws.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ws.framework; path = Libs/ws.framework; sourceTree = "<group>"; };
 		999A99C21E6AB1D70007C653 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Libs/Alamofire.framework; sourceTree = "<group>"; };
 		999A99C41E6AB1F20007C653 /* Arrow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arrow.framework; path = Libs/Arrow.framework; sourceTree = "<group>"; };
+		999A99C71E6AD0090007C653 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = ../Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		999A99C91E6AD09E0007C653 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Libs/Swinject.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				999A99B51E6AB00A0007C653 /* then.framework in Frameworks */,
+				999A99CA1E6AD09E0007C653 /* Swinject.framework in Frameworks */,
 				999A99C51E6AB1F20007C653 /* Arrow.framework in Frameworks */,
 				999A99C11E6AB1D20007C653 /* ws.framework in Frameworks */,
 				999A99C31E6AB1D70007C653 /* Alamofire.framework in Frameworks */,
@@ -126,6 +130,8 @@
 		999A99B31E6AB0090007C653 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				999A99C91E6AD09E0007C653 /* Swinject.framework */,
+				999A99C71E6AD0090007C653 /* Swinject.framework */,
 				999A99C41E6AB1F20007C653 /* Arrow.framework */,
 				999A99C21E6AB1D70007C653 /* Alamofire.framework */,
 				999A99C01E6AB1D20007C653 /* ws.framework */,
@@ -270,6 +276,7 @@
 				"$(SRCROOT)/Libs/then.framework",
 				"$(SRCROOT)/Libs/Alamofire.framework",
 				"$(SRCROOT)/Libs/Arrow.framework",
+				"$(SRCROOT)/Libs/Swinject.framework",
 			);
 			outputPaths = (
 			);

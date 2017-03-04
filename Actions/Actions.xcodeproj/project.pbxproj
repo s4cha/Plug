@@ -11,6 +11,7 @@
 		999A99791E6AAE640007C653 /* ActionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99781E6AAE640007C653 /* ActionsTests.swift */; };
 		999A997B1E6AAE640007C653 /* Actions.h in Headers */ = {isa = PBXBuildFile; fileRef = 999A996D1E6AAE640007C653 /* Actions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		999A99851E6AAE820007C653 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99841E6AAE820007C653 /* Action.swift */; };
+		999A99CD1E6AD4AA0007C653 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99CC1E6AD4AA0007C653 /* Swinject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		999A99781E6AAE640007C653 /* ActionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsTests.swift; sourceTree = "<group>"; };
 		999A997A1E6AAE640007C653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		999A99841E6AAE820007C653 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		999A99CC1E6AD4AA0007C653 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Libs/Swinject.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				999A99CD1E6AD4AA0007C653 /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +61,7 @@
 				999A996C1E6AAE640007C653 /* Actions */,
 				999A99771E6AAE640007C653 /* ActionsTests */,
 				999A996B1E6AAE640007C653 /* Products */,
+				999A99CB1E6AD4AA0007C653 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +91,14 @@
 				999A997A1E6AAE640007C653 /* Info.plist */,
 			);
 			path = ActionsTests;
+			sourceTree = "<group>";
+		};
+		999A99CB1E6AD4AA0007C653 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				999A99CC1E6AD4AA0007C653 /* Swinject.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +343,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs",
+				);
 				INFOPLIST_FILE = Actions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -351,6 +367,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs",
+				);
 				INFOPLIST_FILE = Actions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -404,6 +424,7 @@
 				999A99801E6AAE640007C653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		999A99811E6AAE640007C653 /* Build configuration list for PBXNativeTarget "ActionsTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +433,7 @@
 				999A99831E6AAE640007C653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

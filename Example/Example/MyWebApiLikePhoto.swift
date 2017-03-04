@@ -8,12 +8,24 @@
 
 import then
 import ws
+import Actions
 
-struct MyWebApiLikePhoto: LikePhoto {
+class MyWebApiLikePhoto: LikePhoto {
+
+    let ws = WS("https://jsonplaceholder.typicode.com")
+    
+    override func perform(_ input: Photo) -> Promise<Void> {
+        print("Liking Photo")
+        return ws.post("/photos/\(input.identifier)/like")
+    }
+}
+
+class MyWebApiPostPhoto: PostPhoto {
     
     let ws = WS("https://jsonplaceholder.typicode.com")
     
-    func perform(_ input: Photo) -> Promise<Void> {
-        return ws.post("/photos/\(input.identifier)/like")
+    override func perform(_ input: Photo) -> Promise<Void> {
+        print("Posting Photo")
+        return Promise.resolve()
     }
 }

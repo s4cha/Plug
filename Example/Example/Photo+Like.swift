@@ -15,7 +15,11 @@ import then
 
 extension Photo {
     func like() -> Promise<Void> {
-        return action(_likePhoto, self)
+        return action(LikePhoto.self, self)
+    }
+    
+    func post() -> Promise<Void> {
+        return action(PostPhoto.self, self)
     }
 }
 
