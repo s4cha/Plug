@@ -14,6 +14,6 @@ struct MyWebApiLikePhoto: LikePhoto {
     let ws = WS("https://jsonplaceholder.typicode.com")
     
     func perform(_ input: Photo) -> Promise<Void> {
-        return Promise.resolve()//ws.post("/photos/\(input.identifier)/like")
+        return ws.post("/photos/\(input.identifier)/like")
     }
 }
