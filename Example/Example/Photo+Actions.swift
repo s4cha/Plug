@@ -1,5 +1,5 @@
 //
-//  Photo+Like.swift
+//  Photo+Actions.swift
 //  Example
 //
 //  Created by Sacha Durand Saint Omer on 04/03/2017.
@@ -11,15 +11,15 @@ import then
 
 // This is an optional sugar 
 // We develop software for humans
-// calling photo.like is more intuitive that calling `action(_likePhoto, photo)`
+// calling photo.like is more intuitive that calling `action(_likePhoto, photo)` :)
 
 extension Photo {
     func like() -> Promise<Void> {
-        return action(LikePhoto.self, self)
+        return action(_likePhoto, self)
     }
     
     func post() -> Promise<Void> {
-        return action(PostPhoto.self, self)
+        return action(_postPhoto, self)
     }
 }
 

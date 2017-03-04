@@ -14,16 +14,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let photo = Photo(identifier: 42)
-//        photo.like().then {
-//            // photo has been liked
-//            print("photo liked : \(photo.isLiked)")
-//        }.onError { error in
-//            print("photo liked : \(photo.isLiked)")
-//            // photo couldn't be liked
-//        }
         
-        photo.like().then { s in
-            
+        
+        // Like Action
+        photo.like().then {
+            // photo has been liked
+            print("photo liked : \(photo.isLiked)")
+        }.onError { error in
+            print("photo liked : \(photo.isLiked)")
+            // photo couldn't be liked
+        }
+        
+        
+        // Post Action
+        photo.post().then {
+            // photo posted!
         }
     }
 }

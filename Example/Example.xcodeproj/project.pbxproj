@@ -13,14 +13,13 @@
 		999A999A1E6AAF000007C653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 999A99991E6AAF000007C653 /* Assets.xcassets */; };
 		999A999D1E6AAF000007C653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999A999B1E6AAF000007C653 /* LaunchScreen.storyboard */; };
 		999A99B01E6AAF9F0007C653 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99AF1E6AAF9F0007C653 /* Photo.swift */; };
-		999A99B21E6AAFAF0007C653 /* LikePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99B11E6AAFAF0007C653 /* LikePhoto.swift */; };
 		999A99B51E6AB00A0007C653 /* then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99B41E6AB00A0007C653 /* then.framework */; };
-		999A99B81E6AB04D0007C653 /* MyWebApiLikePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99B71E6AB04D0007C653 /* MyWebApiLikePhoto.swift */; };
-		999A99BF1E6AB0A80007C653 /* Photo+Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99BE1E6AB0A80007C653 /* Photo+Like.swift */; };
+		999A99B81E6AB04D0007C653 /* MyWebApiActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99B71E6AB04D0007C653 /* MyWebApiActions.swift */; };
+		999A99BF1E6AB0A80007C653 /* Photo+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99BE1E6AB0A80007C653 /* Photo+Actions.swift */; };
 		999A99C11E6AB1D20007C653 /* ws.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99C01E6AB1D20007C653 /* ws.framework */; };
 		999A99C31E6AB1D70007C653 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99C21E6AB1D70007C653 /* Alamofire.framework */; };
 		999A99C51E6AB1F20007C653 /* Arrow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99C41E6AB1F20007C653 /* Arrow.framework */; };
-		999A99CA1E6AD09E0007C653 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99C91E6AD09E0007C653 /* Swinject.framework */; };
+		999A99D41E6AF8F70007C653 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99D31E6AF8F70007C653 /* Actions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,15 +56,13 @@
 		999A999E1E6AAF000007C653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		999A99A41E6AAF1A0007C653 /* Actions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Actions.xcodeproj; path = ../Actions/Actions.xcodeproj; sourceTree = "<group>"; };
 		999A99AF1E6AAF9F0007C653 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		999A99B11E6AAFAF0007C653 /* LikePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikePhoto.swift; sourceTree = "<group>"; };
 		999A99B41E6AB00A0007C653 /* then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = then.framework; path = Libs/then.framework; sourceTree = "<group>"; };
-		999A99B71E6AB04D0007C653 /* MyWebApiLikePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebApiLikePhoto.swift; sourceTree = "<group>"; };
-		999A99BE1E6AB0A80007C653 /* Photo+Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+Like.swift"; sourceTree = "<group>"; };
+		999A99B71E6AB04D0007C653 /* MyWebApiActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebApiActions.swift; sourceTree = "<group>"; };
+		999A99BE1E6AB0A80007C653 /* Photo+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+Actions.swift"; sourceTree = "<group>"; };
 		999A99C01E6AB1D20007C653 /* ws.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ws.framework; path = Libs/ws.framework; sourceTree = "<group>"; };
 		999A99C21E6AB1D70007C653 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Libs/Alamofire.framework; sourceTree = "<group>"; };
 		999A99C41E6AB1F20007C653 /* Arrow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arrow.framework; path = Libs/Arrow.framework; sourceTree = "<group>"; };
-		999A99C71E6AD0090007C653 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = ../Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
-		999A99C91E6AD09E0007C653 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Libs/Swinject.framework; sourceTree = "<group>"; };
+		999A99D31E6AF8F70007C653 /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +71,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				999A99B51E6AB00A0007C653 /* then.framework in Frameworks */,
-				999A99CA1E6AD09E0007C653 /* Swinject.framework in Frameworks */,
 				999A99C51E6AB1F20007C653 /* Arrow.framework in Frameworks */,
 				999A99C11E6AB1D20007C653 /* ws.framework in Frameworks */,
 				999A99C31E6AB1D70007C653 /* Alamofire.framework in Frameworks */,
@@ -108,8 +104,7 @@
 				999A99B61E6AB0210007C653 /* Delivery Mechanism Implementation */,
 				999A99921E6AAF000007C653 /* AppDelegate.swift */,
 				999A99941E6AAF000007C653 /* ViewController.swift */,
-				999A99BD1E6AB0980007C653 /* Photo+Like */,
-				999A99BA1E6AB0770007C653 /* LikePhoto */,
+				999A99D21E6AF8E90007C653 /* Core */,
 				999A99961E6AAF000007C653 /* Main.storyboard */,
 				999A99991E6AAF000007C653 /* Assets.xcassets */,
 				999A999B1E6AAF000007C653 /* LaunchScreen.storyboard */,
@@ -130,8 +125,6 @@
 		999A99B31E6AB0090007C653 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				999A99C91E6AD09E0007C653 /* Swinject.framework */,
-				999A99C71E6AD0090007C653 /* Swinject.framework */,
 				999A99C41E6AB1F20007C653 /* Arrow.framework */,
 				999A99C21E6AB1D70007C653 /* Alamofire.framework */,
 				999A99C01E6AB1D20007C653 /* ws.framework */,
@@ -143,34 +136,19 @@
 		999A99B61E6AB0210007C653 /* Delivery Mechanism Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				999A99B71E6AB04D0007C653 /* MyWebApiLikePhoto.swift */,
+				999A99B71E6AB04D0007C653 /* MyWebApiActions.swift */,
 			);
 			name = "Delivery Mechanism Implementation";
 			sourceTree = "<group>";
 		};
-		999A99B91E6AB06B0007C653 /* Photo */ = {
+		999A99D21E6AF8E90007C653 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				999A99BE1E6AB0A80007C653 /* Photo+Actions.swift */,
+				999A99D31E6AF8F70007C653 /* Actions.swift */,
 				999A99AF1E6AAF9F0007C653 /* Photo.swift */,
 			);
-			name = Photo;
-			sourceTree = "<group>";
-		};
-		999A99BA1E6AB0770007C653 /* LikePhoto */ = {
-			isa = PBXGroup;
-			children = (
-				999A99B11E6AAFAF0007C653 /* LikePhoto.swift */,
-				999A99B91E6AB06B0007C653 /* Photo */,
-			);
-			name = LikePhoto;
-			sourceTree = "<group>";
-		};
-		999A99BD1E6AB0980007C653 /* Photo+Like */ = {
-			isa = PBXGroup;
-			children = (
-				999A99BE1E6AB0A80007C653 /* Photo+Like.swift */,
-			);
-			name = "Photo+Like";
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +254,6 @@
 				"$(SRCROOT)/Libs/then.framework",
 				"$(SRCROOT)/Libs/Alamofire.framework",
 				"$(SRCROOT)/Libs/Arrow.framework",
-				"$(SRCROOT)/Libs/Swinject.framework",
 			);
 			outputPaths = (
 			);
@@ -292,11 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				999A99B01E6AAF9F0007C653 /* Photo.swift in Sources */,
-				999A99B21E6AAFAF0007C653 /* LikePhoto.swift in Sources */,
-				999A99B81E6AB04D0007C653 /* MyWebApiLikePhoto.swift in Sources */,
-				999A99BF1E6AB0A80007C653 /* Photo+Like.swift in Sources */,
+				999A99B81E6AB04D0007C653 /* MyWebApiActions.swift in Sources */,
+				999A99BF1E6AB0A80007C653 /* Photo+Actions.swift in Sources */,
 				999A99951E6AAF000007C653 /* ViewController.swift in Sources */,
 				999A99931E6AAF000007C653 /* AppDelegate.swift in Sources */,
+				999A99D41E6AF8F70007C653 /* Actions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +451,7 @@
 				999A99A31E6AAF000007C653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
