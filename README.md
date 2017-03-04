@@ -1,5 +1,4 @@
-# Actions
-
+# Actions 🔌
 
 ## Why
 Because **Classic MVC** pattern is **no longer suitable** for real world Apps. Partly because it was never meant to be. **We developers** spend a **huge** amount of time **trying our best to do things right**.
