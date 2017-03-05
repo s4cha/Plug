@@ -53,7 +53,7 @@ public protocol IsAction {
 }
 ```
 
-### Like Photo Use-Case
+### Create Your Action
 
 For instance in the case of liking a photo, the `LikePhoto` action has an input of `Photo` and an Output of `Promise<Void>`
 
@@ -63,7 +63,7 @@ Here is how our App defines the `LikePhoto` use-case :
 class LikePhoto: Action<Photo,Promise<Void>> { }
 ```
 
-### Calling an action
+### Call it
 ```swift
 action(LikePhoto.self, Photo()).then {
   // photo liked !
@@ -71,7 +71,7 @@ action(LikePhoto.self, Photo()).then {
 ```
 *Note : This uses dependency injection behind the hood to provide the **concrete** `LikePhoto` implementation at runtime*.
 
-### Model sugar
+### Add some Model sugar
 This phase is optional. But software is built for humans and we want this to be as readable as possible !
 
 ```swift
@@ -88,7 +88,7 @@ photo.like.then {
 }
 ```
 
-### Providing A Concrete implementation for our Action
+### Providing A Concrete implementation
 ```swift
 class MyLikePhoto: LikePhoto {
 
@@ -99,6 +99,7 @@ class MyLikePhoto: LikePhoto {
 
 ```
 
+### 🔌 Plug it !
 We can now Inject this implementation in our App form the `AppDelegate` :
 ```swift        
 Actions.plug(LikePhoto.self, to: MyLikePhoto())
