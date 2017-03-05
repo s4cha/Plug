@@ -1,4 +1,4 @@
-# Actions 🔌
+# Plug 🔌
 
 [Reason](#why) - [Example](#example-project) -  [Idea](#main-idea) - [Get Started](#get-started)
 
