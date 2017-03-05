@@ -18,7 +18,7 @@ var network: WS = {
 
 class MyLikePhoto: LikePhoto {
     
-    override func perform(_ input: Photo) -> Promise<Void>? {
+    override func perform(_ input: Photo) -> Promise<Void> {
         print("Like Photo")
        return network.post("/photos/\(input.identifier)/like")
     }
@@ -26,7 +26,7 @@ class MyLikePhoto: LikePhoto {
 
 class MyPostPhoto: PostPhoto {
     
-    override func perform(_ input: Photo) -> Promise<Void>? {
+    override func perform(_ input: Photo) -> Promise<Void> {
         print("Post Photo")
         return Promise.resolve()
     }
