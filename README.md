@@ -3,11 +3,10 @@
 [Reason](#why) - [Example](#example-project) -  [Idea](#main-idea) - [Get Started](#get-started)
 
 ## Why
-Because **Classic MVC** pattern is **no longer suitable** for real world Apps. Partly because it was never meant to be. **We developers** spend a **huge** amount of time **trying our best to do things right**.
-
+Because the **classic way** of building iOS Apps introduces **tight coupling**, often with the network layer. **Dependencies grow** and **code is harder to test.**
 
 ## How
-By providing a **simple convention** on how to **cleanly handle actions** in an iOS App. Developers spend **less time** architechting and more time **adding value for their users.**
+By providing a **simple convention** on how to **cleanly plug implementations** in an iOS App. Developers spend **less time** architecting and more time **adding value for their users.**
 
 
 ## Benefits
@@ -23,7 +22,7 @@ Download and launch the `Example Project` to see how a Typical `LikePhoto` use c
 
 
 ## Main Idea
-This is based on **Robert-C Martin** (Uncle Bob) thoughts, the guy behind the **SOLID** principles
+This is based on **Robert-C Martin** (Uncle Bob) thoughts, the guy behind the **SOLID** principles.
 
 You can watch one of his terrific talks here :
 https://skillsmatter.com/skillscasts/2437-uncle-bob-web-architecture
@@ -35,8 +34,6 @@ This is an **alternative approach** aiming at the **same goal**, but **leveragin
 The **main idea** is that you want to **decouple your App from it's delivery mechanisms.**
 
 Let me rephrases that for you in a classic iOS App context.
-
-
 Your **ViewControllers should not know how an action is performed**. For instance when you like a photo, the controller should'nt know if it's going to send a web request, a database command, or even a local request.
 The ONLY thing it should know is : "I want to like this photo"
 
@@ -72,6 +69,7 @@ action(LikePhoto.self, Photo()).then {
   // photo liked !
 }
 ```
+*Note : This uses dependency injection behind the hood to provide the **concrete** `LikePhoto` implementation at runtime*.
 
 ### Model sugar
 This phase is optional. But software is built for humans and we want this to be as readable as possible !
@@ -83,7 +81,7 @@ extension Photo {
     }
 }
 ```
-You can now write it like this:
+You can now like a photo like this:
 ```swift
 photo.like.then {
   // Photo liked \o/
@@ -105,11 +103,11 @@ We can now Inject this implementation in our App form the `AppDelegate` :
 ```swift        
 Actions.plug(LikePhoto.self, to: MyLikePhoto())
 ```
-Or the short version :
+Or if you prefer the short version :
 ```swift        
 LikePhoto.self <~ MyLikePhoto()
 ```
-All the like photo actions of our App will now use our concrete Implementation preforming a network call :).
+All the `LikePhoto` actions of our App will now use our concrete Implementation preforming a network call :).
 
 This is now super easy to provide a dummy `MockLikePhoto` for testing purposes!
 
