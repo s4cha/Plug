@@ -49,34 +49,26 @@ An `Action` has an `Input` and an `Output`.
 
 Here is what it looks like in swift :
 ```swift
-public protocol Action {
+public protocol IsAction {
     associatedtype Input
     associatedtype Output
-    func perform(_ input: Input) -> Output
+    func perform(_ input: Input) -> Output?
 }
 ```
 
-### Like Photo Abstraction
+### Like Photo Use-Case
 
-For instance in the case of liking a photo, the `LikePhoto` action has an input of `Photo` and an Output of `AsyncTask`
+For instance in the case of liking a photo, the `LikePhoto` action has an input of `Photo` and an Output of `Promise<Void>`
 
 A cool this is that Output can be **synchronous or asynchronous**, it's yours to choose \o/.  
 Here is how our App defines the `LikePhoto` use-case :
 ```swift
-protocol LikePhoto: Action {
-    func perform(_ input: Photo) -> Promise<Void>
-}
-```
-
-### Like Photo Actions
-Now we want to define a `_likePhoto` action that is of Type `LikePhoto`.
-```swift
-var _likePhoto: AnyAction<Photo, Promise<Void>>!
+class LikePhoto: Action<Photo,Promise<Void>> { }
 ```
 
 ### Calling an action
 ```swift
-action(_likePhoto, Photo()).then {
+action(LikePhoto.self, Photo()).then {
   // photo liked !
 }
 ```
@@ -87,7 +79,7 @@ This phase is optional. But software is built for humans and we want this to be 
 ```swift
 extension Photo {
     func like() -> Promise<Void> {
-        return action(_likePhoto, self)
+      return action(LikePhoto.self, self)
     }
 }
 ```
@@ -100,22 +92,22 @@ photo.like.then {
 
 ### Providing A Concrete implementation for our Action
 ```swift
-import then
-import ws
+class MyLikePhoto: LikePhoto {
 
-struct MyWebApiLikePhoto: LikePhoto {
-
-    let ws = WS("https://jsonplaceholder.typicode.com")
-
-    func perform(_ input: Photo) -> Promise<Void> {
-        return ws.post("/photos/\(input.identifier)/like")
+    override func perform(_ input: Photo) -> Promise<Void> {
+       return network.post("/photos/\(input.identifier)/like")
     }
 }
+
 ```
 
-We can now Inject this implementation in our App form the AppDelegate :
+We can now Inject this implementation in our App form the `AppDelegate` :
 ```swift        
-_likePhoto = AnyAction(MyWebApiLikePhoto())
+Actions.plug(LikePhoto.self, to: MyLikePhoto())
+```
+Or the short version :
+```swift        
+LikePhoto.self <~ MyLikePhoto()
 ```
 All the like photo actions of our App will now use our concrete Implementation preforming a network call :).
 
@@ -124,7 +116,7 @@ This is now super easy to provide a dummy `MockLikePhoto` for testing purposes!
 
 
 ## Sum Up
-Using this approach We have
+Using this approach we have:
+
+- A `Type-Safe` way to decouple and inject actions in our App.
 - A clean and readable way to call actions on models.
-- Those actions are forwarded by Model extensions to the Action system.
-- Actions can be provided as plugins in the app delegate.
