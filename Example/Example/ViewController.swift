@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         
         let photo = Photo(identifier: 42)
         
-        
         // Like Action
         photo.like().then {
             // photo has been liked
@@ -24,7 +23,6 @@ class ViewController: UIViewController {
             print("photo liked : \(photo.isLiked)")
             // photo couldn't be liked
         }
-        
         
         // Post Action
         photo.post().then {

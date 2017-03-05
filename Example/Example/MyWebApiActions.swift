@@ -16,17 +16,17 @@ var network: WS = {
     return ws
 }()
 
-struct MyLikePhoto: Action {
+class MyLikePhoto: LikePhoto {
     
-    func perform(_ input: Photo) -> Promise<Void> {
+    override func perform(_ input: Photo) -> Promise<Void>? {
         print("Like Photo")
-        return network.post("/photos/\(input.identifier)/like")
+       return network.post("/photos/\(input.identifier)/like")
     }
 }
 
-struct MyPostPhoto: Action {
+class MyPostPhoto: PostPhoto {
     
-    func perform(_ input: Photo) -> Promise<Void> {
+    override func perform(_ input: Photo) -> Promise<Void>? {
         print("Post Photo")
         return Promise.resolve()
     }

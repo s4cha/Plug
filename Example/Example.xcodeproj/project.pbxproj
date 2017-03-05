@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990D89031E6C2D820091EB7F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990D89021E6C2D820091EB7F /* Swinject.framework */; };
 		999A99931E6AAF000007C653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99921E6AAF000007C653 /* AppDelegate.swift */; };
 		999A99951E6AAF000007C653 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99941E6AAF000007C653 /* ViewController.swift */; };
 		999A99981E6AAF000007C653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999A99961E6AAF000007C653 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		990D89021E6C2D820091EB7F /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Libs/Swinject.framework; sourceTree = "<group>"; };
 		999A998F1E6AAF000007C653 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		999A99921E6AAF000007C653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		999A99941E6AAF000007C653 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				999A99B51E6AB00A0007C653 /* then.framework in Frameworks */,
 				999A99C51E6AB1F20007C653 /* Arrow.framework in Frameworks */,
 				999A99C11E6AB1D20007C653 /* ws.framework in Frameworks */,
+				990D89031E6C2D820091EB7F /* Swinject.framework in Frameworks */,
 				999A99C31E6AB1D70007C653 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +112,7 @@
 		999A99B31E6AB0090007C653 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				990D89021E6C2D820091EB7F /* Swinject.framework */,
 				999A99C41E6AB1F20007C653 /* Arrow.framework */,
 				999A99C21E6AB1D70007C653 /* Alamofire.framework */,
 				999A99C01E6AB1D20007C653 /* ws.framework */,
@@ -239,6 +243,7 @@
 				"$(SRCROOT)/Libs/then.framework",
 				"$(SRCROOT)/Libs/Alamofire.framework",
 				"$(SRCROOT)/Libs/Arrow.framework",
+				"$(SRCROOT)/Libs/Swinject.framework",
 			);
 			outputPaths = (
 			);

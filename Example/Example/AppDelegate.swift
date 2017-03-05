@@ -20,8 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Here we provide our delivery mechanism, here a web Api.
         // The entire app has no idea of the web Api.
         // The dependency is `injected` in the App delegate.
-        _likePhoto <~ MyLikePhoto()
-        _postPhoto <~ MyPostPhoto()
+        
+//        Actions.plug(LikePhoto.self, to: MyLikePhoto())
+//        Actions.plug(PostPhoto.self, to: MyPostPhoto())
+        
+        LikePhoto.self <~ MyLikePhoto()
+        PostPhoto.self <~ MyPostPhoto()
+        
         return true
     }
 }

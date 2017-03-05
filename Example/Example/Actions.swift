@@ -9,6 +9,26 @@
 import Actions
 import then
 
-var _likePhoto: AnyAction<Photo, Promise<Void>>!
-var _postPhoto: AnyAction<Photo, Promise<Void>>!
-// find a way to stringly type Actions?
+
+class LikePhoto: Action<Photo,Promise<Void>> { }
+class PostPhoto: Action<Photo,Promise<Void>> { }
+
+
+
+
+// avantages, strong type for
+
+
+
+//no more dangling vars, uses injection
+
+
+
+// drawbakcs. optional return type?
+
+
+//Test 
+
+
+
+// Type mismatch again?? WTF??
