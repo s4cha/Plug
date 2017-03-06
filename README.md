@@ -20,11 +20,10 @@ By providing a **simple convention** on how to **cleanly plug implementations** 
 
 
 ## Benefits
-- [x] Clean Architecture
-- [x] Code 90% of the App without the Backend implementation
+- [x] Cleaner Architecture (think easier to maintain)
 - [x] Faster build times
 - [x] Less Dependencies (think Better Testability, & Faster tests)
-- [x] Easier to Maintain (predictable system)
+- [x] Code 90% of the App without the backend implementation
 
 
 ## Example Project
@@ -32,20 +31,18 @@ Download and launch the `Example Project` to see how a Typical `LikePhoto` use c
 
 
 ## Main Idea
-This is based on **Robert-C Martin** (Uncle Bob) thoughts, the guy behind the **SOLID** principles.
+The **main idea** is that you want to **decouple your App from it's delivery mechanisms.**
 
-You can watch one of his terrific talks here :
+Let me rephrases that for you in a classic iOS App context.
+Your **ViewControllers should not know how an action is performed**. For instance when you like a photo, the controller should'nt know if it's going to send a `web request`, a `database command`, or even a `local request`.
+The ONLY thing it should know is : "I want to like this photo"
+
+This is based on **Robert-C Martin** (Uncle Bob) thoughts, the guy behind the **SOLID** principles. You can watch one of his terrific talks here :
 https://skillsmatter.com/skillscasts/2437-uncle-bob-web-architecture
-
 His examples are often written in Java, and the swift examples I came across were often Java directly translated into swift.
 
 This is an **alternative approach** aiming at the **same goal**, but **leveraging swift awesomeness**.
 
-The **main idea** is that you want to **decouple your App from it's delivery mechanisms.**
-
-Let me rephrases that for you in a classic iOS App context.
-Your **ViewControllers should not know how an action is performed**. For instance when you like a photo, the controller should'nt know if it's going to send a web request, a database command, or even a local request.
-The ONLY thing it should know is : "I want to like this photo"
 
 
 ## Get Started
@@ -67,7 +64,7 @@ public protocol IsAction {
 
 For instance in the case of liking a photo, the `LikePhoto` action has an input of `Photo` and an Output of `Promise<Void>`
 
-A cool this is that Output can be **synchronous or asynchronous**, it's yours to choose \o/.  
+A cool thing is that Output can be **synchronous or asynchronous**, it's yours to choose \o/.  
 Here is how our App defines the `LikePhoto` use-case :
 ```swift
 class LikePhoto: Action<Photo,Promise<Void>> { }
@@ -79,7 +76,7 @@ action(LikePhoto.self, Photo()).then {
   // photo liked !
 }
 ```
-*Note : This uses dependency injection behind the hood to provide the **concrete** `LikePhoto` implementation at runtime*.
+*Note : This uses dependency injection behind the hood to provide the concrete `LikePhoto` implementation at runtime*.
 
 ### Add some Model sugar
 This phase is optional. But software is built for humans and we want this to be as readable as possible !
@@ -93,7 +90,7 @@ extension Photo {
 ```
 You can now like a photo like this:
 ```swift
-photo.like.then {
+photo.like().then {
   // Photo liked \o/
 }
 ```
