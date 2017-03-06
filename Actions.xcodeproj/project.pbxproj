@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		990D89011E6C1C6D0091EB7F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99CC1E6AD4AA0007C653 /* Swinject.framework */; };
+		9910CBD01E6D2F990030BB4B /* TestUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910CBCF1E6D2F990030BB4B /* TestUseCases.swift */; };
+		9910CBD21E6D2FF40030BB4B /* UseCasesImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910CBD11E6D2FF40030BB4B /* UseCasesImplementations.swift */; };
+		9910CBD31E6D30C00030BB4B /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99CC1E6AD4AA0007C653 /* Swinject.framework */; };
 		999A99DB1E6B01530007C653 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99D81E6B01530007C653 /* Action.swift */; };
 		99C64E221E6D2E7800C2C19F /* PlugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C64E211E6D2E7800C2C19F /* PlugTests.swift */; };
 		99C64E241E6D2E7800C2C19F /* Actions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A996A1E6AAE640007C653 /* Actions.framework */; };
@@ -24,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9910CBCF1E6D2F990030BB4B /* TestUseCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUseCases.swift; sourceTree = "<group>"; };
+		9910CBD11E6D2FF40030BB4B /* UseCasesImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCasesImplementations.swift; sourceTree = "<group>"; };
 		999A996A1E6AAE640007C653 /* Actions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Actions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		999A99CC1E6AD4AA0007C653 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Libs/Swinject.framework; sourceTree = "<group>"; };
 		999A99D81E6B01530007C653 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99C64E241E6D2E7800C2C19F /* Actions.framework in Frameworks */,
+				9910CBD31E6D30C00030BB4B /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				99C64E211E6D2E7800C2C19F /* PlugTests.swift */,
+				9910CBCF1E6D2F990030BB4B /* TestUseCases.swift */,
+				9910CBD11E6D2FF40030BB4B /* UseCasesImplementations.swift */,
 				99C64E231E6D2E7800C2C19F /* Info.plist */,
 			);
 			path = PlugTests;
@@ -146,6 +154,7 @@
 				99C64E1B1E6D2E7800C2C19F /* Sources */,
 				99C64E1C1E6D2E7800C2C19F /* Frameworks */,
 				99C64E1D1E6D2E7800C2C19F /* Resources */,
+				9910CBD41E6D30D50030BB4B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -213,6 +222,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9910CBD41E6D30D50030BB4B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Libs/Swinject.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		999A99651E6AAE640007C653 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -227,6 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				99C64E221E6D2E7800C2C19F /* PlugTests.swift in Sources */,
+				9910CBD01E6D2F990030BB4B /* TestUseCases.swift in Sources */,
+				9910CBD21E6D2FF40030BB4B /* UseCasesImplementations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,8 +421,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs",
+				);
 				INFOPLIST_FILE = PlugTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.freshOS.PlugTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -406,8 +438,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs",
+				);
 				INFOPLIST_FILE = PlugTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.freshOS.PlugTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,6 +479,7 @@
 				99C64E281E6D2E7800C2C19F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

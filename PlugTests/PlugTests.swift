@@ -7,29 +7,32 @@
 //
 
 import XCTest
+import Actions
 
 class PlugTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        AUseCase.self <~ MyUseCaseImplementation()
+        AVoidInputUseCase.self <~ MyVoidInputUseCaseImplementation()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testUndefinedActionYieldsNilIsCalled() {
+        let undefinedAction = UndefinedUseCase()
+        let result = undefinedAction.perform("")
+        XCTAssertNil(result)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testConcreteImplementationIsCalled() {
+        let result = action(AUseCase.self, "Great")
+        XCTAssertTrue(result)
+        
+        let result2 = action(AUseCase.self, "Nope")
+        XCTAssertFalse(result2)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testCanCallVoidInputAction() {
+        let result2 = action(AVoidInputUseCase.self)
+        XCTAssertEqual(result2, "Super")
     }
-    
 }

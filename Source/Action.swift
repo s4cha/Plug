@@ -31,6 +31,11 @@ public func action<T:IsAction>(_ userAction: T?, _ input:T.Input) -> T.Output {
     return userAction!.perform(input)!
 }
 
+public func action<T:IsAction>(_ actionType: T.Type) -> T.Output where T.Input == Void {
+    let a = Actions.get(actionType)
+    return action(a)
+}
+
 public func action<T:IsAction>(_ userAction: T?) -> T.Output where T.Input == Void {
     return userAction!.perform(())!
 }
