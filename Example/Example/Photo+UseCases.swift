@@ -1,12 +1,12 @@
 //
-//  Photo+Actions.swift
+//  Photo+UseCases.swift
 //  Example
 //
 //  Created by Sacha Durand Saint Omer on 04/03/2017.
 //  Copyright © 2017 freshOS. All rights reserved.
 //
 
-import Actions
+import Plug
 import then
 
 // This is an optional sugar 
@@ -14,6 +14,7 @@ import then
 // calling photo.like is more intuitive that calling `action(_likePhoto, photo)` :)
 
 extension Photo {
+    
     func like() -> Promise<Void> {
         return action(LikePhoto.self, self)
     }

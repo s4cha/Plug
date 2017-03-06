@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import Actions
-import then
+import Plug
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,12 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Here we provide our delivery mechanism, here a web Api.
         // The entire app has no idea of the web Api.
         // The dependency is `injected` in the App delegate.
-        
-//        Actions.plug(LikePhoto.self, to: MyLikePhoto())
-//        Actions.plug(PostPhoto.self, to: MyPostPhoto())
-        
         LikePhoto.self <~ MyLikePhoto()
         PostPhoto.self <~ MyPostPhoto()
+        
+        // Equivalent to :
+        // Actions.plug(LikePhoto.self, to: MyLikePhoto())
+        // Actions.plug(PostPhoto.self, to: MyPostPhoto())
         
         return true
     }

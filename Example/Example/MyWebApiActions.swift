@@ -8,7 +8,7 @@
 
 import then
 import ws
-import Actions
+import Plug
 
 var network: WS = {
     let ws = WS("https://jsonplaceholder.typicode.com")
