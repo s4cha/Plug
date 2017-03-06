@@ -13,7 +13,7 @@
 		9910CBD31E6D30C00030BB4B /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A99CC1E6AD4AA0007C653 /* Swinject.framework */; };
 		999A99DB1E6B01530007C653 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99D81E6B01530007C653 /* Action.swift */; };
 		99C64E221E6D2E7800C2C19F /* PlugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C64E211E6D2E7800C2C19F /* PlugTests.swift */; };
-		99C64E241E6D2E7800C2C19F /* Actions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A996A1E6AAE640007C653 /* Actions.framework */; };
+		99C64E241E6D2E7800C2C19F /* Plug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A996A1E6AAE640007C653 /* Plug.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,7 @@
 /* Begin PBXFileReference section */
 		9910CBCF1E6D2F990030BB4B /* TestUseCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUseCases.swift; sourceTree = "<group>"; };
 		9910CBD11E6D2FF40030BB4B /* UseCasesImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCasesImplementations.swift; sourceTree = "<group>"; };
-		999A996A1E6AAE640007C653 /* Actions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Actions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		999A996A1E6AAE640007C653 /* Plug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Plug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		999A99CC1E6AD4AA0007C653 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Libs/Swinject.framework; sourceTree = "<group>"; };
 		999A99D81E6B01530007C653 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		999A99D91E6B01530007C653 /* Actions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actions.h; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99C64E241E6D2E7800C2C19F /* Actions.framework in Frameworks */,
+				99C64E241E6D2E7800C2C19F /* Plug.framework in Frameworks */,
 				9910CBD31E6D30C00030BB4B /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,7 +73,7 @@
 		999A996B1E6AAE640007C653 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				999A996A1E6AAE640007C653 /* Actions.framework */,
+				999A996A1E6AAE640007C653 /* Plug.framework */,
 				99C64E1F1E6D2E7800C2C19F /* PlugTests.xctest */,
 			);
 			name = Products;
@@ -98,8 +98,8 @@
 		999A99D71E6B01530007C653 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				999A99D81E6B01530007C653 /* Action.swift */,
 				999A99D91E6B01530007C653 /* Actions.h */,
+				999A99D81E6B01530007C653 /* Action.swift */,
 				999A99DA1E6B01530007C653 /* Info.plist */,
 			);
 			path = Source;
@@ -129,9 +129,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		999A99691E6AAE640007C653 /* Actions */ = {
+		999A99691E6AAE640007C653 /* Plug */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 999A997E1E6AAE640007C653 /* Build configuration list for PBXNativeTarget "Actions" */;
+			buildConfigurationList = 999A997E1E6AAE640007C653 /* Build configuration list for PBXNativeTarget "Plug" */;
 			buildPhases = (
 				999A99651E6AAE640007C653 /* Sources */,
 				999A99661E6AAE640007C653 /* Frameworks */,
@@ -142,9 +142,9 @@
 			);
 			dependencies = (
 			);
-			name = Actions;
+			name = Plug;
 			productName = Actions;
-			productReference = 999A996A1E6AAE640007C653 /* Actions.framework */;
+			productReference = 999A996A1E6AAE640007C653 /* Plug.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		99C64E1E1E6D2E7800C2C19F /* PlugTests */ = {
@@ -187,7 +187,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 999A99641E6AAE640007C653 /* Build configuration list for PBXProject "Actions" */;
+			buildConfigurationList = 999A99641E6AAE640007C653 /* Build configuration list for PBXProject "Plug" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -199,7 +199,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				999A99691E6AAE640007C653 /* Actions */,
+				999A99691E6AAE640007C653 /* Plug */,
 				99C64E1E1E6D2E7800C2C19F /* PlugTests */,
 			);
 		};
@@ -263,7 +263,7 @@
 /* Begin PBXTargetDependency section */
 		99C64E261E6D2E7800C2C19F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 999A99691E6AAE640007C653 /* Actions */;
+			target = 999A99691E6AAE640007C653 /* Plug */;
 			targetProxy = 99C64E251E6D2E7800C2C19F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -385,7 +385,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.freshOS.Actions;
+				PRODUCT_BUNDLE_IDENTIFIER = com.freshOS.Plug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -410,7 +410,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.freshOS.Actions;
+				PRODUCT_BUNDLE_IDENTIFIER = com.freshOS.Plug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -454,7 +454,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		999A99641E6AAE640007C653 /* Build configuration list for PBXProject "Actions" */ = {
+		999A99641E6AAE640007C653 /* Build configuration list for PBXProject "Plug" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				999A997C1E6AAE640007C653 /* Debug */,
@@ -463,7 +463,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		999A997E1E6AAE640007C653 /* Build configuration list for PBXNativeTarget "Actions" */ = {
+		999A997E1E6AAE640007C653 /* Build configuration list for PBXNativeTarget "Plug" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				999A997F1E6AAE640007C653 /* Debug */,

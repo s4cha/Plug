@@ -6,7 +6,7 @@
 //  Copyright © 2017 freshOS. All rights reserved.
 //
 
-import Actions
+import Plug
 
 class UndefinedUseCase: Action<String,String> { }
 class AUseCase: Action<String,Bool> { }

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Actions
+import Plug
 
 class PlugTests: XCTestCase {
     

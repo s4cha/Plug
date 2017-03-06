@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "999A99691E6AAE640007C653"
-               BuildableName = "Actions.framework"
-               BlueprintName = "Actions"
-               ReferencedContainer = "container:Actions.xcodeproj">
+               BuildableName = "Plug.framework"
+               BlueprintName = "Plug"
+               ReferencedContainer = "container:Plug.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,7 +36,7 @@
                BlueprintIdentifier = "99C64E1E1E6D2E7800C2C19F"
                BuildableName = "PlugTests.xctest"
                BlueprintName = "PlugTests"
-               ReferencedContainer = "container:Actions.xcodeproj">
+               ReferencedContainer = "container:Plug.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "999A99691E6AAE640007C653"
-            BuildableName = "Actions.framework"
-            BlueprintName = "Actions"
-            ReferencedContainer = "container:Actions.xcodeproj">
+            BuildableName = "Plug.framework"
+            BlueprintName = "Plug"
+            ReferencedContainer = "container:Plug.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "999A99691E6AAE640007C653"
-            BuildableName = "Actions.framework"
-            BlueprintName = "Actions"
-            ReferencedContainer = "container:Actions.xcodeproj">
+            BuildableName = "Plug.framework"
+            BlueprintName = "Plug"
+            ReferencedContainer = "container:Plug.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -84,9 +84,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "999A99691E6AAE640007C653"
-            BuildableName = "Actions.framework"
-            BlueprintName = "Actions"
-            ReferencedContainer = "container:Actions.xcodeproj">
+            BuildableName = "Plug.framework"
+            BlueprintName = "Plug"
+            ReferencedContainer = "container:Plug.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
