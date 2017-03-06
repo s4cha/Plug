@@ -12,6 +12,8 @@
 
 [Reason](#why) - [Example](#example-project) -  [Idea](#main-idea) - [Get Started](#get-started) - [Installation](#installation)
 
+![Router](https://raw.githubusercontent.com/s4cha/Plug/master/PlugInfographics.png)
+
 ## Why
 Because the **classic way** of building iOS Apps introduces **tight coupling**, often with the network layer. **Dependencies grow** and **code is harder to test.**
 
