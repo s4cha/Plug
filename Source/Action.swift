@@ -45,10 +45,11 @@ public func action<T:ActionProtocol>(_ userAction: T?) -> T.Output where T.Input
 public class Actions {
     
     public static let container = Container()
-
-    public static func plug<T:ActionProtocol>(_ action: T.Type, to implementation: T) {
+    
+    
+    public static func plug<T:ActionProtocol>(_ action: T.Type, to implementation: @autoclosure @escaping () -> T) {
         container.register(action) { (r:Resolver) -> T in
-            return implementation
+            return implementation()
         }
     }
     
@@ -58,6 +59,6 @@ public class Actions {
 }
 
 infix operator <~
-public func <~ <T:ActionProtocol>(left: T.Type, right:T) {
+public func <~ <T:ActionProtocol>(left: T.Type, right: @autoclosure @escaping () -> T) {
     Actions.plug(left, to: right)
 }
