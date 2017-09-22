@@ -2,13 +2,13 @@
 
 # Plug
 
-[![Language: Swift 3](https://img.shields.io/badge/language-swift3-f48041.svg?style=flat)](https://developer.apple.com/swift)
+[![Language: Swift 3|4](https://img.shields.io/badge/language-swift3|4-f48041.svg?style=flat)](https://developer.apple.com/swift)
 ![Platform: iOS 8+](https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://www.bitrise.io/app/c6d3096518e622f3.svg?token=7QmnkUstRGnMqQ-8eT_h3w)](https://www.bitrise.io/app/c6d3096518e622f3)
 [![codebeat badge](https://codebeat.co/badges/5d4c8283-3b5e-431e-a811-c43ae4f75374)](https://codebeat.co/projects/github-com-s4cha-plug-master)
 [![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/freshOS/Arrow/blob/master/LICENSE)
-[![Release version](https://img.shields.io/badge/release-0.2-blue.svg)]()
+[![Release version](https://img.shields.io/badge/release-0.3-blue.svg)]()
 
 [Reason](#why) - [Example](#example-project) -  [Idea](#main-idea) - [Get Started](#get-started) - [Installation](#installation)
 
@@ -135,3 +135,7 @@ Using this approach we have:
 ```
 github "s4cha/Plug"
 ```
+
+## Swift Version
+Swift 3 -> version **0.2.0**  
+Swift 4 -> version **0.3.0**
