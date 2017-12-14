@@ -7,4 +7,5 @@ framework module ws {
 
 module ws.Swift {
     header "ws-Swift.h"
+    requires objc
 }
