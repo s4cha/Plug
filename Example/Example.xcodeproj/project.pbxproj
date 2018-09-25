@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		990D89031E6C2D820091EB7F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990D89021E6C2D820091EB7F /* Swinject.framework */; };
+		9917D134215A434B00AFD526 /* Plug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997C328A1E6D811500905AAF /* Plug.framework */; };
+		9917D135215A434B00AFD526 /* Plug.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 997C328A1E6D811500905AAF /* Plug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		999A99931E6AAF000007C653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99921E6AAF000007C653 /* AppDelegate.swift */; };
 		999A99951E6AAF000007C653 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99941E6AAF000007C653 /* ViewController.swift */; };
 		999A99981E6AAF000007C653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999A99961E6AAF000007C653 /* Main.storyboard */; };
@@ -31,6 +33,13 @@
 			remoteGlobalIDString = 999A99691E6AAE640007C653;
 			remoteInfo = Plug;
 		};
+		9917D136215A434B00AFD526 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 997C32841E6D811500905AAF /* Plug.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 999A99691E6AAE640007C653;
+			remoteInfo = Plug;
+		};
 		997C32891E6D811500905AAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 997C32841E6D811500905AAF /* Plug.xcodeproj */;
@@ -46,6 +55,20 @@
 			remoteInfo = PlugTests;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9917D138215A434B00AFD526 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9917D135215A434B00AFD526 /* Plug.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		990D89021E6C2D820091EB7F /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Libs/Swinject.framework; sourceTree = "<group>"; };
@@ -74,6 +97,7 @@
 			files = (
 				999A99B51E6AB00A0007C653 /* then.framework in Frameworks */,
 				999A99C51E6AB1F20007C653 /* Arrow.framework in Frameworks */,
+				9917D134215A434B00AFD526 /* Plug.framework in Frameworks */,
 				999A99C11E6AB1D20007C653 /* ws.framework in Frameworks */,
 				990D89031E6C2D820091EB7F /* Swinject.framework in Frameworks */,
 				999A99C31E6AB1D70007C653 /* Alamofire.framework in Frameworks */,
@@ -166,11 +190,13 @@
 				999A998C1E6AAF000007C653 /* Frameworks */,
 				999A998D1E6AAF000007C653 /* Resources */,
 				999A99C61E6AB4D50007C653 /* ShellScript */,
+				9917D138215A434B00AFD526 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				990AD1241E6D8184005316B0 /* PBXTargetDependency */,
+				9917D137215A434B00AFD526 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -184,11 +210,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = freshOS;
 				TargetAttributes = {
 					999A998E1E6AAF000007C653 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4TATSTJ3J3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -290,6 +317,11 @@
 			name = Plug;
 			targetProxy = 990AD1231E6D8184005316B0 /* PBXContainerItemProxy */;
 		};
+		9917D137215A434B00AFD526 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Plug;
+			targetProxy = 9917D136215A434B00AFD526 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -325,6 +357,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -332,6 +365,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -381,6 +415,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -388,6 +423,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -420,7 +456,9 @@
 		999A99A21E6AAF000007C653 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4TATSTJ3J3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libs",
@@ -429,14 +467,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.freshOS.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		999A99A31E6AAF000007C653 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4TATSTJ3J3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libs",
@@ -445,7 +485,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.freshOS.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
