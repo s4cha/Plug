@@ -1,0 +1,4 @@
+framework module Plug {
+  header "Plug-Swift.h"
+  requires objc
+}
