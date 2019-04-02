@@ -60,5 +60,5 @@ public class Actions {
 
 infix operator <~
 public func <~ <T:ActionProtocol>(left: T.Type, right: @autoclosure @escaping () -> T) {
-    Actions.plug(left, to: right)
+    Actions.plug(left, to: right())
 }
