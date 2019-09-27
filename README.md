@@ -2,7 +2,7 @@
 
 # Plug
 
-[![Language: Swift 3|4](https://img.shields.io/badge/language-swift3|4-f48041.svg?style=flat)](https://developer.apple.com/swift)
+[![Language: Swift 3|4|5](https://img.shields.io/badge/language-swift3|4-f48041.svg?style=flat)](https://developer.apple.com/swift)
 ![Platform: iOS 8+](https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://app.bitrise.io/app/c6d3096518e622f3/status.svg?token=7QmnkUstRGnMqQ-8eT_h3w&branch=master)](https://app.bitrise.io/app/c6d3096518e622f3)
@@ -141,3 +141,4 @@ Swift 3 -> version **0.2.0**
 Swift 4 -> version **0.3.0**
 Swift 4.2 -> version **1.0.0**  
 Swift 5.0 -> version **1.1.0**
+Swift 5.1 -> version **1.1.1**
