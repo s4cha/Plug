@@ -138,7 +138,8 @@ github "s4cha/Plug"
 
 ## Swift Version
 Swift 3 -> version **0.2.0**  
-Swift 4 -> version **0.3.0**
+Swift 4 -> version **0.3.0**  
 Swift 4.2 -> version **1.0.0**  
-Swift 5.0 -> version **1.1.0**
-Swift 5.1 -> version **1.1.1**
+Swift 5.0 -> version **1.1.0**  
+Swift 5.1 -> version **1.1.1**  
+Swift 5.1.3 -> version **1.1.2**

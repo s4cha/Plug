@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "1.1.1",
+  "iOS" : [
+    {
+      "name" : "Plug",
+      "hash" : "8b22ba4b9d0cd599bfc73904410bb06d7f0802669cd2459bee0fb1bf8ae879c4",
+      "swiftToolchainVersion" : "5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+    }
+  ]
+}
