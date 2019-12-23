@@ -131,7 +131,12 @@ Using this approach we have:
 
 
 ## Installation
-#### Carthage
+
+#### Swift Package Manager
+```swift
+https://github.com/s4cha/Plug
+```
+#### Carthage (Deprecated)
 ```
 github "s4cha/Plug"
 ```
