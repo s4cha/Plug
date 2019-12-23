@@ -6,7 +6,7 @@
 //  Copyright © 2017 freshOS. All rights reserved.
 //
 
-import then
+import Then
 import ws
 import Plug
 

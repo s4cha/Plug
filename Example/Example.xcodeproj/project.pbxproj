@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		990D89031E6C2D820091EB7F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990D89021E6C2D820091EB7F /* Swinject.framework */; };
-		9917D134215A434B00AFD526 /* Plug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997C328A1E6D811500905AAF /* Plug.framework */; };
-		9917D135215A434B00AFD526 /* Plug.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 997C328A1E6D811500905AAF /* Plug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		999A99931E6AAF000007C653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99921E6AAF000007C653 /* AppDelegate.swift */; };
 		999A99951E6AAF000007C653 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99941E6AAF000007C653 /* ViewController.swift */; };
 		999A99981E6AAF000007C653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999A99961E6AAF000007C653 /* Main.storyboard */; };
@@ -25,37 +23,6 @@
 		999A99D41E6AF8F70007C653 /* UseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999A99D31E6AF8F70007C653 /* UseCases.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		990AD1231E6D8184005316B0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 997C32841E6D811500905AAF /* Plug.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 999A99691E6AAE640007C653;
-			remoteInfo = Plug;
-		};
-		9917D136215A434B00AFD526 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 997C32841E6D811500905AAF /* Plug.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 999A99691E6AAE640007C653;
-			remoteInfo = Plug;
-		};
-		997C32891E6D811500905AAF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 997C32841E6D811500905AAF /* Plug.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 999A996A1E6AAE640007C653;
-			remoteInfo = Plug;
-		};
-		997C328B1E6D811500905AAF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 997C32841E6D811500905AAF /* Plug.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 99C64E1F1E6D2E7800C2C19F;
-			remoteInfo = PlugTests;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		9917D138215A434B00AFD526 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -63,7 +30,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9917D135215A434B00AFD526 /* Plug.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		990D89021E6C2D820091EB7F /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Libs/Swinject.framework; sourceTree = "<group>"; };
-		997C32841E6D811500905AAF /* Plug.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Plug.xcodeproj; path = ../Plug.xcodeproj; sourceTree = "<group>"; };
 		999A998F1E6AAF000007C653 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		999A99921E6AAF000007C653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		999A99941E6AAF000007C653 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +62,6 @@
 			files = (
 				999A99B51E6AB00A0007C653 /* then.framework in Frameworks */,
 				999A99C51E6AB1F20007C653 /* Arrow.framework in Frameworks */,
-				9917D134215A434B00AFD526 /* Plug.framework in Frameworks */,
 				999A99C11E6AB1D20007C653 /* ws.framework in Frameworks */,
 				990D89031E6C2D820091EB7F /* Swinject.framework in Frameworks */,
 				999A99C31E6AB1D70007C653 /* Alamofire.framework in Frameworks */,
@@ -107,19 +71,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		997C32851E6D811500905AAF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				997C328A1E6D811500905AAF /* Plug.framework */,
-				997C328C1E6D811500905AAF /* PlugTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		999A99861E6AAF000007C653 = {
 			isa = PBXGroup;
 			children = (
-				997C32841E6D811500905AAF /* Plug.xcodeproj */,
 				999A99911E6AAF000007C653 /* Example */,
 				999A99901E6AAF000007C653 /* Products */,
 				999A99B31E6AB0090007C653 /* Frameworks */,
@@ -195,8 +149,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				990AD1241E6D8184005316B0 /* PBXTargetDependency */,
-				9917D137215A434B00AFD526 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -225,41 +177,19 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 999A99861E6AAF000007C653;
 			productRefGroup = 999A99901E6AAF000007C653 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 997C32851E6D811500905AAF /* Products */;
-					ProjectRef = 997C32841E6D811500905AAF /* Plug.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				999A998E1E6AAF000007C653 /* Example */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		997C328A1E6D811500905AAF /* Plug.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Plug.framework;
-			remoteRef = 997C32891E6D811500905AAF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		997C328C1E6D811500905AAF /* PlugTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PlugTests.xctest;
-			remoteRef = 997C328B1E6D811500905AAF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		999A998D1E6AAF000007C653 /* Resources */ = {
@@ -291,7 +221,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -310,19 +240,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		990AD1241E6D8184005316B0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Plug;
-			targetProxy = 990AD1231E6D8184005316B0 /* PBXContainerItemProxy */;
-		};
-		9917D137215A434B00AFD526 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Plug;
-			targetProxy = 9917D136215A434B00AFD526 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		999A99961E6AAF000007C653 /* Main.storyboard */ = {
