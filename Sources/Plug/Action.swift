@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Swinject
 
 public protocol ActionProtocol {
     associatedtype Input
@@ -40,25 +39,37 @@ public func action<T:ActionProtocol>(_ userAction: T?) -> T.Output where T.Input
     return userAction!.perform(())!
 }
 
-// MARK - Injections MGMT
+// MARK: - Injections MGMT
 
 public class Actions {
     
-    public static let container = Container()
-    
+    public static let container = DependencyInjection()
     
     public static func plug<T:ActionProtocol>(_ action: T.Type, to implementation: @autoclosure @escaping () -> T) {
-        container.register(action) { (r:Resolver) -> T in
-            return implementation()
-        }
+        container.register(action) { implementation() }
     }
     
     public static func get<T:ActionProtocol>(_ action: T.Type) -> T {
-        return container.resolve(action)!
+        return container.resolve(action)
     }
 }
 
 infix operator <~
 public func <~ <T:ActionProtocol>(left: T.Type, right: @autoclosure @escaping () -> T) {
     Actions.plug(left, to: right())
+}
+
+// MARK: - DependencyInjection
+
+public class DependencyInjection {
+        
+    private var storage = [String: () -> Any]()
+    
+    func register<T>(_ type: T.Type, block: @escaping () -> T) {
+        storage[String(describing: type)] = block
+    }
+    
+    func resolve<T>(_ type:T.Type? = nil) -> T {
+        return storage[String(describing: type ?? T.self)]!() as! T
+    }
 }

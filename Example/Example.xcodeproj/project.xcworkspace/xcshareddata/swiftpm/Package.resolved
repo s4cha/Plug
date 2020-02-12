@@ -20,15 +20,6 @@
         }
       },
       {
-        "package": "Swinject",
-        "repositoryURL": "https://github.com/Swinject/Swinject",
-        "state": {
-          "branch": null,
-          "revision": "8a76d2c74bafbb455763487cc6a08e91bad1f78b",
-          "version": "2.7.1"
-        }
-      },
-      {
         "package": "Then",
         "repositoryURL": "https://github.com/freshOS/Then",
         "state": {
