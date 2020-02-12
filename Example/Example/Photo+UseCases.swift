@@ -7,7 +7,7 @@
 //
 
 import Plug
-import then
+import Then
 
 // This is an optional sugar 
 // We develop software for humans

@@ -7,7 +7,7 @@
 //
 
 import Plug
-import then
+import Then
 
 class LikePhoto: Action<Photo,Promise<Void>> { }
 class PostPhoto: Action<Photo,Promise<Void>> { }
